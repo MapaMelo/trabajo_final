@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("Inicio/Escritorio - fondo.jpg");
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+}
+
+.carta {
+    position: relative;
+    width: 180px;
+    transform: rotate(-12deg);
+    left: 10%;
+}
+
+.guitarra {
+    position: relative;
+    width: 150px;
+    transform: rotate(5deg);
+    left: 50%;
+}
+
+.medalla {
+    width: 160px;
+    transform: rotate(-8deg);
+}
