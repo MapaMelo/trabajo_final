@@ -1,0 +1,23 @@
+.titulo-centrado {
+    position: absolute;
+    top: 20%;
+    left: 32%;
+    font-family: "Playwrite CZ", cursive;
+    font-size: 500%;      
+    font-weight: 350;      
+    color: rgb(0, 0, 0);
+    text-shadow: 3px 3px 10px rgb(0, 0, 0);  
+}
+
+.Flecha {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 5%;         
+    cursor: pointer;    
+    transition: transform 0.2s ease; 
+}
+
+.Flecha:hover {
+    transform: scale(1.1); 
+}
