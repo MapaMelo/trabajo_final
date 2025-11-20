@@ -27,10 +27,10 @@ function Interaccion(elem) {
 
     if (src.endsWith(".jpg") | src.endsWith(".jpeg") | src.endsWith(".png") | src.endsWith(".webp")) {
         elem.addEventListener("mouseenter", () => {
-            elem.style.transform = "scale(1.3) rotate(5deg)";
+            elem.style.transform = "scale(1.3) rotate(9%)";
         });
         elem.addEventListener("mouseleave", () => {
-            elem.style.transform = "scale(1) rotate(0deg)";
+            elem.style.transform = "scale(1) rotate(0%)";
         });
     }
 
