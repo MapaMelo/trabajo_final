@@ -77,6 +77,21 @@ function crearElemento() {
     }
     nuevo.classList.add("elementoCreados");
 
+    const zona = document.getElementById("zonaProtegida");
+    const rect = zona.getBoundingClientRect();
+
+    let x, y;
+
+    // repetir hasta que NO esté dentro del área protegida
+    do {
+        x = numeroAleatorio(0, window.innerWidth - 200);
+        y = numeroAleatorio(0, window.innerHeight - 200);
+    } while (
+        x > rect.left &&
+        x < rect.right &&
+        y > rect.top &&
+        y < rect.bottom
+    );
 
     const x = numeroAleatorio(0, window.innerWidth - 200);
     const y = numeroAleatorio(0, window.innerHeight - 200);

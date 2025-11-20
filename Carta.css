@@ -46,3 +46,12 @@
     border-radius: 10px;
     transition: 0.3s;
 }
+
+#zonaProhibida {
+    position: absolute;
+    top: 10%;     
+    left: 25%;
+    width: 50%;   
+    height: 50%;  
+    pointer-events: none;
+}
