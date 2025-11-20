@@ -88,7 +88,7 @@ function crearElemento() {
     nuevo.style.left = x + "px";
     nuevo.style.top = y + "px";
 
-    document.body.appendChild(nuevo);
+    document.body.document.body.append(nuevo);
 
     Interaccion(nuevo);
 }
