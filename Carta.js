@@ -72,7 +72,7 @@ function crearElemento() {
         nuevo.src = ruta;
     }
 
-    nuevo.classList.add("elementoCreados");
+    nuevo.classList.add("elementosCreados");
 
     const zona = document.getElementById("zonaProhibida");
     const rect = zona.getBoundingClientRect();
