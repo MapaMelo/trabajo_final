@@ -11,8 +11,6 @@ Boton.addEventListener("mouseup", () => {
     Titulo.style.color = "Black";
 });
 
-
-
 const elementos = [
     "Medalla/Prueba_1.jpeg",
     "Medalla/Prueba_2.png",
@@ -21,16 +19,15 @@ const elementos = [
     "Medalla/Prueba_5_video.mp4"
 ];
 
-
 function Interaccion(elem) {
     const src = elem.src.toLowerCase();
 
     if (src.endsWith(".jpg") || src.endsWith(".jpeg") || src.endsWith(".png") || src.endsWith(".webp")) {
         elem.addEventListener("mouseenter", () => {
-            elem.style.transform = "scale(1.3) rotate(9%)";
+            elem.style.transform = "scale(1.3) rotate(9deg)";
         });
         elem.addEventListener("mouseleave", () => {
-            elem.style.transform = "scale(1) rotate(0%)";
+            elem.style.transform = "scale(1) rotate(0deg)";
         });
     }
 
@@ -54,7 +51,6 @@ function numeroAleatorio(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-
 function crearElemento() {
 
     const indice = numeroAleatorio(0, elementos.length);
@@ -75,6 +71,7 @@ function crearElemento() {
         nuevo = document.createElement("img");
         nuevo.src = ruta;
     }
+
     nuevo.classList.add("elementoCreados");
 
     const zona = document.getElementById("zonaProhibida");
@@ -92,7 +89,6 @@ function crearElemento() {
         y < rect.bottom
     );
 
-
     nuevo.style.left = x + "px";
     nuevo.style.top = y + "px";
 
@@ -100,6 +96,5 @@ function crearElemento() {
 
     Interaccion(nuevo);
 }
-
 
 Boton.addEventListener("click", crearElemento);
