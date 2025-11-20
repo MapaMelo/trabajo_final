@@ -85,7 +85,7 @@ while (!valido) {
     agregarInteraccion(nuevo);
 }
 
-function agregarInteraccion(elem) {
+function Interaccion(elem) {
     const src = elem.src.toLowerCase();
 
     
