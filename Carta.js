@@ -17,8 +17,8 @@ const elementos = [
     "Medalla/Prueba 1.jpeg",
     "Medalla/Prueba 2.png",
     "Medalla/Prueba 3.png",
-    "Medalla/Sonido1.mp3",
-    "Medalla/Video1.mp4"
+    "Medalla/Prueba 4 cancion.mp3",
+    "Medalla/Prueba 4 video.mp4"
 ];
 
 function crearElemento() {
@@ -32,7 +32,7 @@ function crearElemento() {
     else if (elegido.endsWith(".mp4") || elegido.endsWith(".webm")) {
         nuevo = document.createElement("video");
         nuevo.src = elegido;
-        nuevo.muted = true; // necesario para reproducir sin bloqueo
+        nuevo.muted = true; 
     }
     else {
         nuevo = document.createElement("img");
@@ -68,7 +68,6 @@ while (!valido) {
         bottom: y + alto
     };
 
-    // Verifica si se solapan (colisión)
     const colision =
         !(elemRect.right < botonRect.left ||
           elemRect.left > botonRect.right ||

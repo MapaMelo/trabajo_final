@@ -33,7 +33,7 @@ function crearElemento() {
     else if (elegido.endsWith(".mp4") || elegido.endsWith(".webm")) {
         nuevo = document.createElement("video");
         nuevo.src = elegido;
-        nuevo.muted = true; // necesario para reproducir sin bloqueo
+        nuevo.muted = true; 
     }
     else {
         nuevo = document.createElement("img");
