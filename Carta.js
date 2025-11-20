@@ -77,12 +77,11 @@ function crearElemento() {
     }
     nuevo.classList.add("elementoCreados");
 
-    const zona = document.getElementById("zonaProtegida");
+    const zona = document.getElementById("zonaProhibida");
     const rect = zona.getBoundingClientRect();
 
     let x, y;
 
-    // repetir hasta que NO esté dentro del área protegida
     do {
         x = numeroAleatorio(0, window.innerWidth - 200);
         y = numeroAleatorio(0, window.innerHeight - 200);
@@ -93,8 +92,6 @@ function crearElemento() {
         y < rect.bottom
     );
 
-    const x = numeroAleatorio(0, window.innerWidth - 200);
-    const y = numeroAleatorio(0, window.innerHeight - 200);
 
     nuevo.style.left = x + "px";
     nuevo.style.top = y + "px";
