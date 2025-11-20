@@ -14,11 +14,11 @@ Boton.addEventListener("mouseup", () => {
 
 
 const elementos = [
-    "Medalla/Prueba 1.jpeg",
-    "Medalla/Prueba 2.png",
-    "Medalla/Prueba 3.png",
-    "Medalla/Prueba 4 cancion.mp3",
-    "Medalla/Prueba 4 video.mp4"
+    "Medalla/Prueba_1.jpeg",
+    "Medalla/Prueba_2.png",
+    "Medalla/Prueba_3.png",
+    "Medalla/Prueba_4_cancion.mp3",
+    "Medalla/Prueba_5_video.mp4"
 ];
 
 function crearElemento() {
