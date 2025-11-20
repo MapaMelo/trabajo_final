@@ -25,7 +25,7 @@ const elementos = [
 function Interaccion(elem) {
     const src = elem.src.toLowerCase();
 
-    if (src.endsWith(".jpg") | src.endsWith(".jpeg") | src.endsWith(".png") | src.endsWith(".webp")) {
+    if (src.endsWith(".jpg") || src.endsWith(".jpeg") || src.endsWith(".png") || src.endsWith(".webp")) {
         elem.addEventListener("mouseenter", () => {
             elem.style.transform = "scale(1.3) rotate(9%)";
         });
@@ -34,7 +34,7 @@ function Interaccion(elem) {
         });
     }
 
-    if (src.endsWith(".mp3") | src.endsWith(".wav")) {
+    if (src.endsWith(".mp3") || src.endsWith(".wav")) {
         elem.style.width = "130px";
         elem.addEventListener("mouseenter", () => elem.play());
         elem.addEventListener("mouseleave", () => {
@@ -62,11 +62,11 @@ function crearElemento() {
 
     let nuevo;
 
-    if (ruta.endsWith(".mp3") | ruta.endsWith(".wav")) {
+    if (ruta.endsWith(".mp3") || ruta.endsWith(".wav")) {
         nuevo = document.createElement("audio");
         nuevo.src = ruta;
     }
-    else if (ruta.endsWith(".mp4") | ruta.endsWith(".webm")) {
+    else if (ruta.endsWith(".mp4") || ruta.endsWith(".webm")) {
         nuevo = document.createElement("video");
         nuevo.src = ruta;
         nuevo.muted = true;
@@ -75,12 +75,8 @@ function crearElemento() {
         nuevo = document.createElement("img");
         nuevo.src = ruta;
     }
+    nuevo.classList.add("elementoCreados");
 
-    nuevo.style.position = "absolute";
-    nuevo.style.width = "180px";
-    nuevo.style.boxShadow = "0 4px 15px rgba(0,0,0,0.3)";
-    nuevo.style.borderRadius = "10px";
-    nuevo.style.transition = "0.3s";
 
     const x = numeroAleatorio(0, window.innerWidth - 200);
     const y = numeroAleatorio(0, window.innerHeight - 200);
@@ -88,7 +84,7 @@ function crearElemento() {
     nuevo.style.left = x + "px";
     nuevo.style.top = y + "px";
 
-    document.body.document.body.append(nuevo);
+    document.body.append(nuevo);
 
     Interaccion(nuevo);
 }

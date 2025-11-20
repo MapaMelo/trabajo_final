@@ -38,3 +38,11 @@
     top: 52.5%;
     left: 44.5%;
 }
+
+.elementoCreados {
+    position: absolute;
+    width: 180px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    transition: 0.3s;
+}
