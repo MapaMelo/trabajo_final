@@ -86,8 +86,10 @@ while (!valido) {
 }
 
 function agregarInteraccion(elem) {
+    const src = elem.src.toLowerCase();
 
-    if (elem.tagName === "IMG") {
+    
+    if (src.endsWith(".jpg") | src.endsWith(".jpeg") | src.endsWith(".png") | src.endsWith(".webp")) {
         elem.addEventListener("mouseenter", () => {
             elem.style.transform = "scale(1.3) rotate(5deg)";
         });
@@ -96,25 +98,21 @@ function agregarInteraccion(elem) {
         });
     }
 
-    if (elem.tagName === "AUDIO") {
-        elem.addEventListener("mouseenter", () => {
-            elem.play();
-        });
+    
+    if (src.endsWith(".mp3") | src.endsWith(".wav")) {
+        elem.style.width = "130px";
+        elem.addEventListener("mouseenter", () => elem.play());
         elem.addEventListener("mouseleave", () => {
             elem.pause();
             elem.currentTime = 0;
         });
-        elem.style.width = "130px";
     }
 
-    if (elem.tagName === "VIDEO") {
-        elem.addEventListener("mouseenter", () => {
-            elem.play();
-        });
-        elem.addEventListener("mouseleave", () => {
-            elem.pause();
-        });
+    
+    if (src.endsWith(".mp4") {
         elem.style.width = "220px";
+        elem.addEventListener("mouseenter", () => elem.play());
+        elem.addEventListener("mouseleave", () => elem.pause());
     }
 }
 
