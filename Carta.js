@@ -75,7 +75,12 @@ function crearElemento() {
     nuevo.classList.add("elementosCreados");
 
     const zona = document.getElementById("zonaProhibidaCentro");
-    const rect = zona.getBoundingClientRect();
+    const rect = {
+    left: zona.offsetLeft,
+    top: zona.offsetTop,
+    right: zona.offsetLeft + zona.offsetWidth,
+    bottom: zona.offsetTop + zona.offsetHeight
+};
 
     let x, y;
     
