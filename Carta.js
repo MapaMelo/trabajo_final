@@ -78,15 +78,18 @@ function crearElemento() {
     const rect = zona.getBoundingClientRect();
 
     let x, y;
+    
+    const w = 180;
+    const h = 180;
 
     do {
         x = numeroAleatorio(0, window.innerWidth - 200);
         y = numeroAleatorio(0, window.innerHeight - 200);
     } while (
-        x > rect.left &&
-        x < rect.right &&
-        y > rect.top &&
-        y < rect.bottom
+        x + w > rect.left &&   
+        x < rect.right &&      
+        y + h > rect.top &&
+        y < rect.bottom        
     );
 
     nuevo.style.left = x + "px";
