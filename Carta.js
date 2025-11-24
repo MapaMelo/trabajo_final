@@ -61,11 +61,13 @@ function crearElemento() {
     if (ruta.endsWith(".mp3") || ruta.endsWith(".wav")) {
         nuevo = document.createElement("audio");
         nuevo.src = ruta;
+        nuevo.controls = true;
     }
     else if (ruta.endsWith(".mp4") || ruta.endsWith(".webm")) {
         nuevo = document.createElement("video");
         nuevo.src = ruta;
         nuevo.muted = true;
+        nuevo.controls = true;
     }
     else {
         nuevo = document.createElement("img");
