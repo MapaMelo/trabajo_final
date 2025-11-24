@@ -75,28 +75,22 @@ function crearElemento() {
     nuevo.classList.add("elementosCreados");
 
     const zona = document.getElementById("zonaProhibidaCentro");
-    const rect = {
-    left: zona.offsetLeft,
-    top: zona.offsetTop,
-    right: zona.offsetLeft + zona.offsetWidth,
-    bottom: zona.offsetTop + zona.offsetHeight
-};
+    const rect = zona.getBoundingClientRect();
 
-    let x, y;
-    
     const w = 180;
     const h = 180;
 
-    do {
-        x = numeroAleatorio(0, window.innerWidth - 200);
-        y = numeroAleatorio(0, window.innerHeight - 200);
-    } while (
-        x + w > rect.left &&   
-        x < rect.right &&      
-        y + h > rect.top &&
-        y < rect.bottom        
-    );
+    let x, y;
 
+    do {
+        x = numeroAleatorio(0, window.innerWidth - w);
+        y = numeroAleatorio(0, window.innerHeight - h);
+    } while (
+        x < rect.right &&
+        x + w > rect.left &&
+        y < rect.bottom &&
+        y + h > rect.top
+    );
     nuevo.style.left = x + "px";
     nuevo.style.top = y + "px";
 
