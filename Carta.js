@@ -67,7 +67,7 @@ function crearElemento() {
         nuevo = document.createElement("video");
         nuevo.src = ruta;
         nuevo.muted = true;
-        nuevo.controls = false;
+        nuevo.controls = true;
     }
     else {
         nuevo = document.createElement("img");
