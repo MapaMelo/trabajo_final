@@ -12,7 +12,7 @@ Boton.addEventListener("mouseup", () => {
 })
 
 const elementos = [
-
+// agregar elementos
 ];
 
 function Interaccion(elem) {

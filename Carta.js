@@ -12,11 +12,23 @@ Boton.addEventListener("mouseup", () => {
 })
 
 const elementos = [
-    "Medalla/Prueba_1.jpeg",
-    "Medalla/Prueba_2.jpg",
-    "Medalla/Prueba_3.jpg",
-    "Medalla/Prueba_4_cancion.mp3",
-    "Medalla/Prueba_5 _video.mp4"
+    "carta/4.mp4",
+    "carta/6.mp4",
+    "carta/66.mp4",
+    "carta/67.mp4",
+    "carta/25.jpg",
+    "carta/26.jpg",
+    "carta/27.jpg",
+    "carta/28.jpg",
+    "carta/29.jpg",
+    "carta/30.jpg",
+    "carta/31.jpg",
+    "carta/32.jpg",
+    "carta/33.jpg",
+    "carta/a1.mp3",
+    "carta/a2.mp3",
+    "carta/a3.mp3",
+    "carta/a4.mp3"
 ];
 
 function Interaccion(elem) {
@@ -40,7 +52,7 @@ function Interaccion(elem) {
         });
     }
 
-    if (src.endsWith(".mp4")) || (src.endsWith(".MOV")) || (src.endsWith(".AVI")){
+    if (src.endsWith(".mp4") || src.endsWith(".mov") || src.endsWith(".avi")){
         elem.style.width = "220px";
         elem.addEventListener("mouseenter", () => elem.play());
         elem.addEventListener("mouseleave", () => elem.pause());
