@@ -11,112 +11,94 @@ Boton.addEventListener("mouseup", () => {
     Titulo.style.color = "Black";
 })
 
-
-
-
 const elementos = [
-    "Medalla/Prueba 1.jpeg",
-    "Medalla/Prueba 2.png",
-    "Medalla/Prueba 3.png",
-    "Medalla/Sonido1.mp3",
-    "Medalla/Video1.mp4"
+    "Medalla/Prueba_1.jpeg",
+    "Medalla/Prueba_2.jpg",
+    "Medalla/Prueba_3.jpg",
+    "Medalla/Prueba_4_cancion.mp3",
+    "Medalla/Prueba_5 _video.mp4"
 ];
 
-function crearElemento() {
-    const elegido = elementos[Math.floor(Math.random() * elementos.length)];
-    let nuevo;
+function Interaccion(elem) {
+    const src = elem.src.toLowerCase();
 
-    if (elegido.endsWith(".mp3") || elegido.endsWith(".wav")) {
-        nuevo = document.createElement("audio");
-        nuevo.src = elegido;
-    }
-    else if (elegido.endsWith(".mp4") || elegido.endsWith(".webm")) {
-        nuevo = document.createElement("video");
-        nuevo.src = elegido;
-        nuevo.muted = true; 
-    }
-    else {
-        nuevo = document.createElement("img");
-        nuevo.src = elegido;
-    }
-
-    nuevo.style.position = "absolute";
-    nuevo.style.width = "180px";
-    nuevo.style.boxShadow = "0 4px 15px rgba(0,0,0,0.3)";
-    nuevo.style.borderRadius = "10px";
-    nuevo.style.transition = "all 0.3s ease";
-
-    const centroX = window.innerWidth / 2;
-    const centroY = window.innerHeight / 2;
-    const rango = 400;
-
-    let x, y;
-let valido = false;
-
-const botonRect = Boton.getBoundingClientRect();
-
-while (!valido) {
-    x = centroX + (Math.random() * rango * 2 - rango);
-    y = centroY + (Math.random() * rango * 2 - rango);
-
-    const ancho = 180;
-    const alto = 180;
-
-    const elemRect = {
-        left: x,
-        right: x + ancho,
-        top: y,
-        bottom: y + alto
-    };
-
-    const colision =
-        !(elemRect.right < botonRect.left ||
-          elemRect.left > botonRect.right ||
-          elemRect.bottom < botonRect.top ||
-          elemRect.top > botonRect.bottom);
-
-    if (!colision) valido = true;
-}
-
-    nuevo.style.left = x + "px";
-    nuevo.style.top = y + "px";
-
-    document.body.appendChild(nuevo);
-
-    agregarInteraccion(nuevo);
-}
-
-function agregarInteraccion(elem) {
-
-    if (elem.tagName === "IMG") {
+    if (src.endsWith(".jpg") || src.endsWith(".jpeg") || src.endsWith(".png") || src.endsWith(".webp")) {
         elem.addEventListener("mouseenter", () => {
-            elem.style.transform = "scale(1.3) rotate(5deg)";
+            elem.style.transform = "scale(1.3) rotate(9deg)";
         });
         elem.addEventListener("mouseleave", () => {
             elem.style.transform = "scale(1) rotate(0deg)";
         });
     }
 
-    if (elem.tagName === "AUDIO") {
-        elem.addEventListener("mouseenter", () => {
-            elem.play();
-        });
+    if (src.endsWith(".mp3") || src.endsWith(".wav")) {
+        elem.style.width = "130px";
+        elem.addEventListener("mouseenter", () => elem.play());
         elem.addEventListener("mouseleave", () => {
             elem.pause();
             elem.currentTime = 0;
         });
-        elem.style.width = "130px";
     }
 
-    if (elem.tagName === "VIDEO") {
-        elem.addEventListener("mouseenter", () => {
-            elem.play();
-        });
-        elem.addEventListener("mouseleave", () => {
-            elem.pause();
-        });
+    if (src.endsWith(".mp4")) || (src.endsWith(".MOV")) || (src.endsWith(".AVI")){
         elem.style.width = "220px";
+        elem.addEventListener("mouseenter", () => elem.play());
+        elem.addEventListener("mouseleave", () => elem.pause());
     }
+}
+
+function numeroAleatorio(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+function crearElemento() {
+
+    const indice = numeroAleatorio(0, elementos.length);
+    const ruta = elementos[indice];
+
+    let nuevo;
+
+    if (ruta.endsWith(".mp3") || ruta.endsWith(".wav")) {
+        nuevo = document.createElement("audio");
+        nuevo.src = ruta;
+        nuevo.controls = true;
+    }
+    else if (ruta.endsWith(".mp4") || ruta.endsWith(".webm")) {
+        nuevo = document.createElement("video");
+        nuevo.src = ruta;
+        nuevo.muted = true;
+        nuevo.controls = false;
+    }
+    else {
+        nuevo = document.createElement("img");
+        nuevo.src = ruta;
+    }
+
+    nuevo.classList.add("elementosCreados");
+
+    const zona = document.getElementById("zonaProhibidaCentro");
+    const rect = zona.getBoundingClientRect();
+
+    const w = 180;
+    const h = 180;
+
+    let x, y;
+
+    do {
+        x = numeroAleatorio(0, window.innerWidth - w);
+        y = numeroAleatorio(0, window.innerHeight - h);
+    } while (
+        x < rect.right &&
+        x + w > rect.left &&
+        y < rect.bottom &&
+        y + h > rect.top
+    );
+    nuevo.style.left = x + "px";
+    nuevo.style.top = y + "px";
+
+    document.body.append(nuevo);
+
+    Interaccion(nuevo);
 }
 
 Boton.addEventListener("click", crearElemento);

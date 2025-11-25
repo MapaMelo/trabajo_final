@@ -40,7 +40,7 @@ function Interaccion(elem) {
         });
     }
 
-    if (src.endsWith(".mp4")) {
+    if (src.endsWith(".mp4")) || (src.endsWith(".MOV")) || (src.endsWith(".AVI")){
         elem.style.width = "220px";
         elem.addEventListener("mouseenter", () => elem.play());
         elem.addEventListener("mouseleave", () => elem.pause());
