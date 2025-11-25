@@ -102,4 +102,3 @@ function crearElemento() {
 }
 
 Boton.addEventListener("click", crearElemento);
-Boton.addEventListener("click", crearElemento);
