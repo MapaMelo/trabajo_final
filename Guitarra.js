@@ -14,7 +14,6 @@ Boton.addEventListener("mouseup", () => {
 const elementos = [
     "guitarra/22.jpg",
     "guitarra/24.jpg",
-    "guitarra/25.jpg",
     "guitarra/26.jpg",
     "guitarra/27.jpg",
     "guitarra/28.jpg",
