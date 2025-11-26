@@ -12,7 +12,40 @@ Boton.addEventListener("mouseup", () => {
 })
 
 const elementos = [
-    "https://1drv.ms/v/c/3dce5c747f671e00/EfiebHVm99dMoT56a3prgcoBHJPl886ehCbXq-6DwPZ1ug?e=qNLfUK&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+    "medalla/6.mp4",
+    "medalla/7.mp4",
+    "medalla/25.mp4",
+    "medalla/26.mp4",
+    "medalla/27.mp4",
+    "medalla/36.mp4",
+    "medalla/37.mp4",
+    "medalla/41.mp4",
+    "medalla/42.mp4",
+    "medalla/43.mp4",
+    "medalla/44.mp4",
+    "medalla/45.mp4",
+    "medalla/46.jpg",
+    "medalla/52.jpg",
+    "medalla/53.jpg",
+    "medalla/55.jpg",
+    "medalla/56.jpg",
+    "medalla/57.jpg",
+    "medalla/59.jpg",
+    "medalla/60.jpg",
+    "medalla/61.jpg",
+    "medalla/63.jpg",
+    "medalla/65.jpg",
+    "medalla/66.jpg",
+    "medalla/67.jpg",
+    "medalla/68.jpg",
+    "medalla/71.jpg",
+    "medalla/73.jpg",
+    "medalla/75.jpg",
+    "medalla/a1.mp3",
+    "medalla/a2.mp3",
+    "medalla/a3.mp3",
+    "medalla/a4.mp3",
+    "medalla/a5.mp3"
 ];
 
 function Interaccion(elem) {
