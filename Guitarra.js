@@ -42,7 +42,6 @@ function Interaccion(elem) {
     }
 
     if (src.endsWith(".mp3") || src.endsWith(".wav")) {
-        elem.style.width = "130px";
         elem.addEventListener("mouseenter", () => elem.play());
         elem.addEventListener("mouseleave", () => {
             elem.pause();

@@ -44,7 +44,6 @@
 
 .elementosCreados {
     position: absolute;
-    width: 180px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     border-radius: 10px;
     transition: 0.3s;
@@ -54,6 +53,12 @@ audio.elementosCreados {
     width: 130px !important;
     height: auto !important;
 }
+
+img.elementosCreados {
+    width: 180px;
+    height: auto;
+}
+
 
 video.elementosCreados {
     width: 220px !important;
