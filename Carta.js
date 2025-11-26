@@ -12,22 +12,7 @@ Boton.addEventListener("mouseup", () => {
 })
 
 const elementos = [
-    "carta/4.mp4",
-    "carta/6.mp4",
-    "carta/66.mp4",
-    "carta/67.mp4",
-    "carta/25.jpg",
-    "carta/26.jpg",
-    "carta/27.jpg",
-    "carta/28.jpg",
-    "carta/29.jpg",
-    "carta/30.jpg",
-    "carta/31.jpg",
-    "carta/32.jpg",
-    "carta/33.jpg",
-    "carta/a1.mp3",
-    "carta/a2.mp3",
-    "carta/a3.mp3",
+
     "carta/a4.mp3",
 ];
 
