@@ -28,7 +28,7 @@ const elementos = [
     "carta/a1.mp3",
     "carta/a2.mp3",
     "carta/a3.mp3",
-    "carta/a4.mp3"
+    "carta/a4.mp3",
 ];
 
 function Interaccion(elem) {
@@ -68,7 +68,6 @@ function crearElemento() {
     const indice = numeroAleatorio(0, elementos.length);
     const ruta = elementos[indice];
 
-    let nuevo;
 
     if (ruta.endsWith(".mp3") || ruta.endsWith(".wav")) {
         nuevo = document.createElement("audio");
