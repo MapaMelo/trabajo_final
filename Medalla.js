@@ -57,6 +57,7 @@ function Interaccion(elem) {
     }
 
     if (src.endsWith(".mp3") || src.endsWith(".wav")) {
+        elem.style.width = "200px";
         elem.addEventListener("mouseenter", () => elem.play());
         elem.addEventListener("mouseleave", () => {
             elem.pause();
@@ -85,18 +86,18 @@ function crearElemento() {
 
     if (rutaBaja.endsWith(".mp3") || rutaBaja.endsWith(".wav")) {
         nuevo = document.createElement("audio");
-        nuevo.src = ruta.toLowerCase();
+        nuevo.src = ruta;
         nuevo.controls = true;
     }
     else if (rutaBaja.endsWith(".mp4")){
         nuevo = document.createElement("video");
-        nuevo.src = ruta.toLowerCase();
+        nuevo.src = ruta;
         nuevo.muted = true;
         nuevo.controls = false;
     }
     else if (rutaBaja.endsWith(".jpg") || rutaBaja.endsWith(".jpeg") || rutaBaja.endsWith(".png") || rutaBaja.endsWith(".webp")) {
         nuevo = document.createElement("img");
-        nuevo.src = ruta.toLowerCase();
+        nuevo.src = ruta;
     }
 //si no es ninguno...
     else {
