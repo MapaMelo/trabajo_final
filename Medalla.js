@@ -12,7 +12,36 @@ Boton.addEventListener("mouseup", () => {
 })
 
 const elementos = [
-    "/workspaces/trabajo_final/medalla/f3.JPG"
+    "medalla/video1.MP4",
+    "medalla/video2.mp4",
+    "medalla/video3.mp4",
+    "medalla/video4.mp4",
+    "medalla/video5.mp4",
+    "medalla/video6.mp4",
+    "medalla/video7.mp4",
+    "medalla/video8.mp4",
+    "medalla/video9.mp4",
+    "medalla/video10.mp4",
+    "medalla/video11.mp4",
+
+    "medalla/f1.jpg",
+    "medalla/f2.PNG",
+    "medalla/f3.JPG",
+    "medalla/f4.JPG",
+    "medalla/f5.JPG",
+    "medalla/f6.JPG",
+    "medalla/f7.JPG",
+    "medalla/f8.JPG",
+    "medalla/f9.JPG",
+    "medalla/f10.JPG",
+
+    "medalla/a1.mp3",
+    "medalla/a2.mp3",
+    "medalla/a3.mp3",
+    "medalla/a4.mp3",
+    "medalla/a6.mp3",
+    "medalla/a7.mp3",
+    "medalla/a999.mp3"
 ];
 
 function Interaccion(elem) {
@@ -56,18 +85,18 @@ function crearElemento() {
 
     if (rutaBaja.endsWith(".mp3") || rutaBaja.endsWith(".wav")) {
         nuevo = document.createElement("audio");
-        nuevo.src = ruta;
+        nuevo.src = ruta.toLowerCase();
         nuevo.controls = true;
     }
     else if (rutaBaja.endsWith(".mp4")){
         nuevo = document.createElement("video");
-        nuevo.src = ruta;
+        nuevo.src = ruta.toLowerCase();
         nuevo.muted = true;
         nuevo.controls = false;
     }
     else if (rutaBaja.endsWith(".jpg") || rutaBaja.endsWith(".jpeg") || rutaBaja.endsWith(".png") || rutaBaja.endsWith(".webp")) {
         nuevo = document.createElement("img");
-        nuevo.src = ruta;
+        nuevo.src = ruta.toLowerCase();
     }
 //si no es ninguno...
     else {
