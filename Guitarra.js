@@ -66,19 +66,20 @@ function crearElemento() {
     const ruta = elementos[indice];
 
     let nuevo;
+    const rutaBaja = ruta.toLowerCase();
 
-    if (ruta.endsWith(".mp3") || ruta.endsWith(".wav")) {
+    if (rutaBaja.endsWith(".mp3") || rutaBaja.endsWith(".wav")) {
         nuevo = document.createElement("audio");
         nuevo.src = ruta;
         nuevo.controls = true;
     }
-    else if (ruta.endsWith(".mp4") || ruta.endsWith(".webm")) {
+    else if (rutaBaja.endsWith(".mp4")){
         nuevo = document.createElement("video");
         nuevo.src = ruta;
         nuevo.muted = true;
         nuevo.controls = false;
     }
-    else {
+    else (rutaBaja.endsWith(".jpg") || rutaBaja.endsWith(".jpeg") || rutaBaja.endsWith(".png") || rutaBaja.endsWith(".webp")) {
         nuevo = document.createElement("img");
         nuevo.src = ruta;
     }
