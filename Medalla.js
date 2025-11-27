@@ -98,7 +98,11 @@ function crearElemento() {
         nuevo = document.createElement("img");
         nuevo.src = ruta;
     }
-
+//si no es ninguno...
+    else {
+        console.error("Error: Tipo de archivo o extensión no reconocido para la ruta:", ruta);
+        return; 
+    }
     nuevo.classList.add("elementosCreados");
 
     const zona = document.getElementById("zonaProhibidaCentro");
