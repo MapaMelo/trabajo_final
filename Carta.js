@@ -13,7 +13,7 @@ Boton.addEventListener("mouseup", () => {
 
 const elementos = [
 
-    "carta/a4.mp3",
+    "a4.mp3",
 ];
 
 function Interaccion(elem) {
