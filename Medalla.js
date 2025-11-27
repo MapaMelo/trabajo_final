@@ -12,40 +12,36 @@ Boton.addEventListener("mouseup", () => {
 })
 
 const elementos = [
-    "medalla/6.mp4",
-    "medalla/7.mp4",
-    "medalla/25.mp4",
-    "medalla/26.mp4",
-    "medalla/27.mp4",
-    "medalla/36.mp4",
-    "medalla/37.mp4",
-    "medalla/41.mp4",
-    "medalla/42.mp4",
-    "medalla/43.mp4",
-    "medalla/44.mp4",
-    "medalla/45.mp4",
-    "medalla/46.jpg",
-    "medalla/52.jpg",
-    "medalla/53.jpg",
-    "medalla/55.jpg",
-    "medalla/56.jpg",
-    "medalla/57.jpg",
-    "medalla/59.jpg",
-    "medalla/60.jpg",
-    "medalla/61.jpg",
-    "medalla/63.jpg",
-    "medalla/65.jpg",
-    "medalla/66.jpg",
-    "medalla/67.jpg",
-    "medalla/68.jpg",
-    "medalla/71.jpg",
-    "medalla/73.jpg",
-    "medalla/75.jpg",
+    "medalla/video1.mp4",
+    "medalla/video2.mp4",
+    "medalla/video3.mp4",
+    "medalla/video4.mp4",
+    "medalla/video5.mp4",
+    "medalla/video6.mp4",
+    "medalla/video7.mp4",
+    "medalla/video8.mp4",
+    "medalla/video9.mp4",
+    "medalla/video10.mp4",
+    "medalla/video11.mp4",
+
+    "medalla/f1.jpg",
+    "medalla/f2.jpg",
+    "medalla/f3.jpg",
+    "medalla/f4.jpg",
+    "medalla/f5.jpg",
+    "medalla/f6.jpg",
+    "medalla/f7.jpg",
+    "medalla/f8.jpg",
+    "medalla/f9.jpg",
+    "medalla/f10.jpg",
+
     "medalla/a1.mp3",
     "medalla/a2.mp3",
     "medalla/a3.mp3",
     "medalla/a4.mp3",
-    "medalla/a5.mp3"
+    "medalla/a6.mp3",
+    "medalla/a7.mp3",
+    "medalla/a999.mp3"
 ];
 
 function Interaccion(elem) {
@@ -98,7 +94,7 @@ function crearElemento() {
         nuevo.muted = true;
         nuevo.controls = false;
     }
-    else (rutaBaja.endsWith(".jpg") || rutaBaja.endsWith(".jpeg") || rutaBaja.endsWith(".png") || rutaBaja.endsWith(".webp")) {
+    else if (rutaBaja.endsWith(".jpg") || rutaBaja.endsWith(".jpeg") || rutaBaja.endsWith(".png") || rutaBaja.endsWith(".webp")) {
         nuevo = document.createElement("img");
         nuevo.src = ruta;
     }

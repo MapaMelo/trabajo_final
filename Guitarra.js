@@ -79,7 +79,7 @@ function crearElemento() {
         nuevo.muted = true;
         nuevo.controls = false;
     }
-    else (rutaBaja.endsWith(".jpg") || rutaBaja.endsWith(".jpeg") || rutaBaja.endsWith(".png") || rutaBaja.endsWith(".webp")) {
+    else if(rutaBaja.endsWith(".jpg") || rutaBaja.endsWith(".jpeg") || rutaBaja.endsWith(".png") || rutaBaja.endsWith(".webp")) {
         nuevo = document.createElement("img");
         nuevo.src = ruta;
     }
