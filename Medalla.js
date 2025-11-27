@@ -12,36 +12,7 @@ Boton.addEventListener("mouseup", () => {
 })
 
 const elementos = [
-    "medalla/video1.MP4",
-    "medalla/video2.mp4",
-    "medalla/video3.mp4",
-    "medalla/video4.mp4",
-    "medalla/video5.mp4",
-    "medalla/video6.mp4",
-    "medalla/video7.mp4",
-    "medalla/video8.mp4",
-    "medalla/video9.mp4",
-    "medalla/video10.mp4",
-    "medalla/video11.mp4",
-
-    "medalla/f1.jpg",
-    "medalla/f2.PNG",
-    "medalla/f3.JPG",
-    "medalla/f4.JPG",
-    "medalla/f5.JPG",
-    "medalla/f6.JPG",
-    "medalla/f7.JPG",
-    "medalla/f8.JPG",
-    "medalla/f9.JPG",
-    "medalla/f10.JPG",
-
-    "medalla/a1.mp3",
-    "medalla/a2.mp3",
-    "medalla/a3.mp3",
-    "medalla/a4.mp3",
-    "medalla/a6.mp3",
-    "medalla/a7.mp3",
-    "medalla/a999.mp3"
+    "/workspaces/trabajo_final/medalla/f3.JPG"
 ];
 
 function Interaccion(elem) {
